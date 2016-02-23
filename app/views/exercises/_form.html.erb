@@ -13,7 +13,7 @@
 		<% end %>
 		<div class="form-group">
 			<div class="control-label col-md-2">
-				<%= f.label :duration_in_min, "Duration(min)" %>
+				<%= f.label :duration_in_min, "Duration (min)" %>
 			</div>
 			<div class="col-md-10">
 				<%= f.number_field :duration_in_min, class: "form-control" %>
@@ -32,7 +32,7 @@
 				<%= f.label :workout_date, "Activity date" %>
 			</div>
 			<div class="col-md-10">
-				<%= f.text_field :workout_date, class: "form-control" %>
+				<%= f.text_field :workout_date, class: "form-control", id: "exercise_workout_date" %>
 			</div>
 		</div>
 		<div class="form-group">
