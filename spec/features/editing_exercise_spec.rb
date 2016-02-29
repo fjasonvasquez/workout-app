@@ -3,7 +3,7 @@ require "rails_helper"
 RSpec.feature "Editing Exercises" do 
 
 	before do
-		@owner = User.create(email: "owner@example.com", password: "password")
+		@owner = User.create(first_name: "John", last_name: "Doe", email: "owner@example.com", password: "password")
 
 		@owner_exer = @owner.exercises.create!(duration_in_min: 45,
 			workout: "Cardio Activity",
@@ -13,7 +13,7 @@ RSpec.feature "Editing Exercises" do
 
 	scenario "with valid inputs succeeds" do
 		visit "/"
-		click_in "My Lounge"
+		click_link "My Lounge"
 		link = "a[href='/users/#{@owner.id}/exercises/#{@owner_exer.id}/edit']"
 		find(link).click
 		fill_in "Duration", with: 50
